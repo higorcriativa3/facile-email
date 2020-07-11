@@ -43,9 +43,8 @@ input:focus {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.356) ;
 }
 
-.passengers-container {
-  width: 100%;
-  display: flex;
+#passengers-container {
+  text-align: center;
 }
 
 .ageCount-container {
@@ -71,7 +70,7 @@ input:focus {
   width: 100px;
 }
 
-#trip-container {
+#trip-container, #tripBack-container {
   margin: 0 auto;
   margin-top: 50px;
   width: 70%;
@@ -86,11 +85,11 @@ input:focus {
   justify-content: space-between;
 } */
 
-#date-container {
+#date-container, #backDate-container {
   display: inline-block;
 }
 
-#dateLeave, #dateArrive {
+#dateLeave, #dateArrive, #backDateLeave, #backDateArrive {
   margin-right: 70px;
 }
 
@@ -102,4 +101,18 @@ input[type="checkbox"] {
 
 img[alt="adicionar"]{
   cursor: pointer;
+}
+
+img[alt="remover"]{
+  cursor: pointer;
+}
+
+#connection {
+  text-align: center;
+}
+
+#back, #removeBack {
+  cursor: pointer;
+  color: blue;
+  margin-left: 20px;
 }
