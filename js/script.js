@@ -1,5 +1,7 @@
 $('#tripBack-container').hide();
 $("#removeBack").hide();
+$('#conn-container').hide();
+$('#backConn-container').hide();
 
 $("#add").on('click', function () {
   var el = $('.passengerRow');
@@ -46,6 +48,22 @@ $("#removeBack").on('click', function() {
   $("#removeBack").hide();
   $("#back").show();
 });
+
+$("#connection").on('click', function(){
+  if($("#connection").is(':checked')) {
+    $('#conn-container').show();
+  } else {
+    $('#conn-container').hide();
+  }
+})
+
+$("#backConnection").on('click', function(){
+  if($("#backConnection").is(':checked')) {
+    $('#backConn-container').show();
+  } else {
+    $('#backConn-container').hide();
+  }
+})
 
 function remove(el) {
   el.parentElement.remove();
