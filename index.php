@@ -12,7 +12,8 @@
   <title>Facile Envio de Email</title>
 </head>
 <body>
-  
+  <div id="load"><img src="img/load.gif" alt="Gif de load"></div>
+  <div id="success"><h3>E-mail enviando com sucesso!</h3><img src="img/closeBlack.png" alt="Botão fechar" id="closeSuccess"></div>
   <form enctype="multipart/form-data" id="container" name="container">
     <h1>FORMULÁRIO PARA ENVIO DE COMPROVANTE</h1>
     <div id='peoples-container'>
@@ -169,9 +170,9 @@
     <p id="removeBack">Remover volta</p>
 
     <div id="bottom">
-      <input type="file" name="comp1" class="inputfile file" id="file">
+      <input type="file" name="comp1" class="inputfile file" id="file" accept=".pdf">
       <label for="file" id="label1"><strong>Selecione um arquivo</strong></label>
-      <input type="file" name="comp2" class="inputfile" id="file2">
+      <input type="file" name="comp2" class="inputfile" id="file2" accept=".pdf">
       <label for="file2" id="label2"><strong>Selecione um arquivo</strong></label><br>
       <button type="submit" class="button" id="btn-submit">Enviar</button>
     </div>

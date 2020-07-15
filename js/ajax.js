@@ -3,6 +3,7 @@ $(document).ready(function(){
   $("#container").submit(function(){
 
       var fd = new FormData(this);
+      $('#load').show();
 
       $.ajax({
           url: 'send.php',
@@ -11,10 +12,11 @@ $(document).ready(function(){
           contentType: false,
           processData: false,
           success: function(response){
-              if(response != 0){
-                  console.log(response);
+              if(response != 0 && response == 'ok'){
+                $('#load').hide();
+                $('#success').show();
               }else{
-                  alert('file not uploaded');
+                  alert('Ops! algo deu errado, tente novamente.');
               }
           },
       });

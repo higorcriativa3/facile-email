@@ -1,7 +1,7 @@
 <?php
 class MailSender
 {
-    public function sendMail($email, $user, $id, $type)
+    public function sendMail($email, $user, $body, $file, $file2, $to)
     {
         require 'scripts/PHPMailer/PHPMailerAutoload.php';
         include 'includes/config.php';
@@ -26,12 +26,15 @@ class MailSender
         $mail->addAddress($email, $user);
 
         //Set the subject line
-        $mail->Subject = 'Comprovante';
+        $mail->Subject = 'Detalhe da sua viagem para '.$to.' E-ticket/Recibo';
 
         //Set the body of the message
-        $mail->Body = 'Just testing';
+        $mail->Body = $body;
 
-        $mail->AltBody  =  'Just testing';
+        $mail->AltBody  =  $body;
+
+        $mail->addAttachment( $file, 'comprovante.pdf');
+        $mail->addAttachment($file2, 'comprovante2.pdf');
 
         //SMTP Settings
         if ($mailServerType == 'smtp') {
